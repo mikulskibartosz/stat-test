@@ -1,0 +1,33 @@
+I
+Generate samples
+`r samples <- rnorm(30, 18.5, 0.5)`
+
+Null hypothesis - the population mean is smaller or equal to 20
+Alternative hypothesis - the population mean is greater than 20
+Confidence level 0.9
+`r t.test(samples, alternative = "g", mu = 20, conf.level = 0.9)`
+
+Result: cannot reject the null hypothesis
+
+II
+Generate samples
+`r samples <- rnorm(49, 53.1, 10)`
+
+Null hypothesis - the population mean is smaller or equal to 50
+Alternative hypothesis - the population mean is greater than 50
+Confidence level 0.9
+`r t.test(samples, alternative = "g", mu = 50, conf.level = 0.9)`
+
+Result: the null hypothesis can be rejected at 0.1 significance level 
+
+III
+Variance: `r variance = 200`
+Standard deviation: `r stdev = sqrt(variance)`
+Generate samples
+`r samples <- rnorm(100, 40, stdev)`
+
+Null hypothesis - the population mean is equals 40
+Alternative hypothesis - the population mean differs from 40
+`r t.test(samples, mu = 40, conf.level = 0.9)`
+
+Result: the null hypothesis can be rejected at 0.1 significance level
